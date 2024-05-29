@@ -1,9 +1,9 @@
-import React from 'react';
-import { FaFacebook, FaTwitter, FaDiscord, FaInstagram } from 'react-icons/fa';
+import React from "react";
+import { FaFacebook, FaTwitter, FaDiscord, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-white pt-20 pb-16 lg:pt-48 lg:pb-24">
+    <footer className="bg-white pt-8 pb-16 lg:pt-8 lg:pb-24">
       <div className="mx-auto max-w-[1280px] px-24 sm2:px-40">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Kolom Pertama */}
@@ -35,8 +35,7 @@ const Footer = () => {
             <a href="https://www.instagram.com" aria-label="Instagram">
               <FaInstagram size="24" />
             </a>
-            </div>
-          
+          </div>
         </div>
         {/* Bagian Bawah */}
         <div className="flex flex-col md:flex-row justify-between items-center mt-8 border-t border-gray-700 pt-4">
@@ -44,11 +43,17 @@ const Footer = () => {
             <p>© NovelApp 2024</p>
           </div>
           <div className="flex space-x-4 text-center md:text-left justify-between">
-            <a href="#" className="hover:underline">Terms of Service</a>
+            <a href="#" className="hover:underline">
+              Terms of Service
+            </a>
             <span class="inline-block mx-2">·</span>
-            <a href="#" className="hover:underline">Privacy Policy</a>
+            <a href="#" className="hover:underline">
+              Privacy Policy
+            </a>
             <span class="inline-block mx-2">·</span>
-            <a href="#" className="hover:underline">Cookie Policy</a>
+            <a href="#" className="hover:underline">
+              Cookie Policy
+            </a>
           </div>
         </div>
       </div>
