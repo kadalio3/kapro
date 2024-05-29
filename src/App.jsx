@@ -9,9 +9,22 @@ function App() {
       <div className="sticky-outer-wrapper w-full max-w-5x1">
         <div className="sticky-inner-wrapper w-full" style={{ position: 'relative', top: '0px', zIndex: 999 }}>
           <Navbar />
-          <main className="container mx-auto items-center flex-1 p-4 w-full max-w-5x1">
-            <h1 className="text-2xl font-bold mb-4">Main Content</h1>
-            <p>This is the main content area.</p>
+          <main id="app">
+            <div class="grid ww-8hteb5">
+            <div id="loading-container-replacement">
+            <div class="overflow-hidden">
+            <div class="sm2:px-40 px-24 mx-auto max-w-[1280px] pt-16 pb-40 sm:pt-36 sm:pb-80">
+            <div class="flex w-full flex-col lg:flex-row lg:space-x-40">
+            <div class="lg:w-[61.66%]">
+              <div class="flex w-full flex-col lg:flex-row lg:space-x-40">
+              <div class="lg:w-[61.66%]"></div>
+              </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
             </main>
           <Footer />
         </div>

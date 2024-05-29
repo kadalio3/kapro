@@ -21,9 +21,9 @@ const Navbar = () => {
       <div className="mx-auto flex h-full max-w-[1280px] flex-1 py-0 px-2 md:px-24">
         <div className="text-xl font-bold">NovelApp</div>
         <div className="mr-8 flex flex-1 justify-center items-center pt-[8px] sm:pt-0 md:ml-13">
-          <a href="/" className="flex h-full items-center px-4">Beranda</a>
-          <a href="/library" className="flex h-full items-center px-4">Library</a>
-          <a className="flex h-full items-center px-4" href="/novels">Novel</a>
+          <a href="/" className="flex h-full items-center px-4 font-semibold">Beranda</a>
+          <a href="/library" className="flex h-full items-center px-4 font-semibold">Library</a>
+          <a className="flex h-full items-center px-4 font-semibold" href="/novels">Novel</a>
         </div>
         <div className="flex items-center space-x-4">
           <div className="relative">
