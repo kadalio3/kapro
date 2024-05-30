@@ -1,0 +1,21 @@
+.news-slider .slick-dots {
+  bottom: 10px;
+}
+
+.news-slider .slick-prev,
+.news-slider .slick-next {
+  width: 30px;
+  height: 30px;
+}
+
+.news-slider .slick-prev:before,
+.news-slider .slick-next:before {
+  font-size: 20px;
+  color: black;
+}
+
+.slick-arrow {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 5px;
+}

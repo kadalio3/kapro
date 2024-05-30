@@ -1,13 +1,18 @@
-import React from 'react';
+import React from "react";
 
 const CardSlider = ({ maxItems }) => {
   return (
     <div className="card-slider">
-      <div className="card-slider-inner">
+      <div className="card-slider-inner flex justify-between">
         {[...Array(maxItems)].map((_, index) => (
           <div key={index} className="card">
-            <img src={`https://via.placeholder.com/200x300?text=Card+${index + 1}`} alt={`Card ${index + 1}`} />
-            <h3 className="text-lg font-semibold mt-2">Card Title {index + 1}</h3>
+            <img
+              src={`https://via.placeholder.com/200x300?text=Card+${index + 1}`}
+              alt={`Card ${index + 1}`}
+            />
+            <h3 className="text-lg font-semibold mt-2">
+              Card Title {index + 1}
+            </h3>
           </div>
         ))}
       </div>
