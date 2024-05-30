@@ -1,4 +1,9 @@
-import React from "react";
+import React from 'react';
+import Carousel from './Carousel';
+import NewsSlider from './NewsSlider';
+import CardSlider from './CardSlider';
+import TabsWithContent from './TabsWithContent';
+import RecentUpdates from './RecentUpdates';
 
 const Main = () => {
   return (
@@ -8,37 +13,43 @@ const Main = () => {
           <div className="overflow-hidden">
             <div className="sm2:px-40 px-24 mx-auto max-w-[1280px] pt-16 pb-40 sm:pt-36 sm:pb-80">
               <div className="flex w-full flex-col lg:flex-row lg:space-x-40">
+                {/* Komponen Pertama */}
                 <div className="lg:w-[61.66%]">
-                  <div className="flex w-full flex-col lg:flex-row lg:space-x-40">
-                    <div className="lg:w-[61.66%]">
-                      <h2 className="text-4xl leading-8 font-semibold mb-12 text-slate-700">
-                        Weekly Novel
-                      </h2>
-                      <div className="overflow-x-auto sm:space-x-16">
-                        <div className="flex space-x-40">
-                          {/* Menggantikan komponen Novel dengan contoh komponen */}
-                          <div className="w-64 h-96 bg-gray-300"></div>
-                          <div className="w-64 h-96 bg-gray-300"></div>
-                          <div className="w-64 h-96 bg-gray-300"></div>
-                          <div className="w-64 h-96 bg-gray-300"></div>
-                        </div>
-                      </div>
+                  <div className="flex w-full flex-col lg:flex-row lg:space-x-40 mb-8">
+                    <div className="lg:w-2/3">
+                      <Carousel />
                     </div>
-                  </div>
-                </div>
-                <div className="lg:w-[38.34%]">
-                  <h2 className="text-4xl leading-8 font-semibold mb-12 text-slate-700">
-                    Latest News
-                  </h2>
-                  <div className="overflow-x-auto sm:space-x-16">
-                    <div className="flex space-x-40">
-                      {/* Menggantikan komponen News dengan contoh komponen */}
-                      <div className="w-64 h-48 bg-gray-300"></div>
-                      <div className="w-64 h-48 bg-gray-300"></div>
+                    <div className="lg:w-1/3">
+                      <NewsSlider />
                     </div>
                   </div>
                 </div>
               </div>
+              {/* Komponen Kedua */}
+              <section className="mb-8">
+                <h2 className="text-2xl font-bold mb-4">Genre Populer</h2>
+                <CardSlider maxItems={5} />
+              </section>
+              {/* Komponen Ketiga */}
+              <section className="mb-8">
+                <h2 className="text-2xl font-bold mb-4">Populer Minggu Ini</h2>
+                <CardSlider maxItems={6} />
+              </section>
+              {/* Komponen Keempat */}
+              <section className="mb-8">
+                <h2 className="text-2xl font-bold mb-4">Novel Baru</h2>
+                <CardSlider maxItems={6} />
+              </section>
+              {/* Komponen Kelima */}
+              <section className="mb-8">
+                <h2 className="text-2xl font-bold mb-4">Kategori</h2>
+                <TabsWithContent />
+              </section>
+              {/* Komponen Keenam */}
+              <section className="mb-8">
+                <h2 className="text-2xl font-bold mb-4">Update Terbaru</h2>
+                <RecentUpdates />
+              </section>
             </div>
           </div>
         </div>
