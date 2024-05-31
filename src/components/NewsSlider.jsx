@@ -1,87 +1,40 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// Import Swiper React components
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
-const NewsSlider = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: true,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-  };
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-  const newsItems = [
-    {
-      thumbnail: "https://via.placeholder.com/100",
-      title: "News Title 1",
-      date: "2024-05-01",
-    },
-    {
-      thumbnail: "https://via.placeholder.com/100",
-      title: "News Title 2",
-      date: "2024-05-02",
-    },
-    {
-      thumbnail: "https://via.placeholder.com/100",
-      title: "News Title 3",
-      date: "2024-05-03",
-    },
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+const news = () => {
+  [
+    { thumbnail: "https://via.placeholder.com/100", title: 'News 1', author: 'Author 1', updated: '1 jam yang lalu' },
+    { thumbnail: "https://via.placeholder.com/100", title: 'News 2', author: 'Author 2', updated: '12 jam yang lalu' },
+    { thumbnail: "https://via.placeholder.com/100", title: 'News 3', author: 'Author 3', updated: '4 jam yang lalu' },
+    { thumbnail: "https://via.placeholder.com/100", title: 'News 4', author: 'Author 4', updated: '3 jam yang lalu' },
   ];
-
+}
+export default () => {
   return (
-    <div className="news-slider relative">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-bold">Pengumuman</h2>
-        <button className="text-blue-500 hover:underline">View All</button>
-      </div>
-      <Slider {...settings}>
-        {newsItems.map((news, index) => (
-          <div key={index} className="flex border p-4 shadow-md">
-            <img
-              src={news.thumbnail}
-              alt={`Thumbnail for ${news.title}`}
-              className="w-16 h-16 object-cover rounded"
-            />
-            <div className="ml-4 flex flex-col">
-              <h3 className="text-lg font-semibold">{news.title}</h3>
-              <p className="text-gray-600">
-                {new Date(news.date).toLocaleDateString()}
-              </p>
+    <div className="recent-updates">
+    {news.map((anon, index) => (
+    <Swiper>
+          <SwiperSlide>
+          <div key={index} className="news-item flex items-center mb-4">
+            <div className="avatar w-16 h-16 bg-gray-300 mr-4"></div>
+            <div className="info">
+              <h4 className="text-lg font-semibold">{anon.title}</h4>
+              <p className="text-gray-600">{anon.author}</p>
+              <p className="text-gray-500">{anon.updated}</p>
             </div>
           </div>
-        ))}
-      </Slider>
-    </div>
+          </SwiperSlide>
+    </Swiper>
+   ))}
+   </div>
   );
 };
-
-const SampleNextArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`${className} slick-arrow`}
-      style={{ ...style, display: "block", right: "-10px", zIndex: 10 }}
-      onClick={onClick}
-    />
-  );
-};
-
-const SamplePrevArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`${className} slick-arrow`}
-      style={{ ...style, display: "block", left: "-10px", zIndex: 10 }}
-      onClick={onClick}
-    />
-  );
-};
-
-export default NewsSlider;
