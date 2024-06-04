@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 
-
-
-
 const Profile = () => {
 const [dropdownOpen, setDropdownOpen] = useState(false);
 
